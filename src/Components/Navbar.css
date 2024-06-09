@@ -1,0 +1,101 @@
+/* Navbar.css */
+
+/* General styles for the navbar container */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #c73934,#06b6d4, #202c3f); /* Gradient background */
+  color: white;
+  position: fixed;
+  width: 99%;
+ 
+  z-index: 1;
+  border-radius: 20px;
+  
+}
+
+/* Navbar brand/name */
+.nav-container p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-left: 20px;
+  color: black;
+  
+}
+
+/* Navbar links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  padding-right: 20px;
+}
+
+.nav-links-li {
+  margin: 0 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffd700; /* Highlight color on hover */
+}
+
+/* Responsive styles for smaller screens */
+.bars {
+  display: none;
+  cursor: pointer;
+  padding-right: 20px;
+}
+
+/* Mobile menu styles */
+.bar-menu {
+  display: none;
+  flex-direction: column;
+  list-style: none;
+  position: absolute;
+  top: 60px; /* Adjust based on navbar height */
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to right, #0b3841, #0f5ad1);
+  padding: 1rem 0;
+  margin: 0;
+}
+
+.bar-menu-li {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.bar-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  
+}
+
+.bar-menu a:hover {
+  color: #ffd700; /* Highlight color on hover */
+}
+
+/* Show mobile menu and toggle button on smaller screens */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .bars {
+    display: block;
+  }
+
+  .bar-menu {
+    display: flex;
+  }
+}
